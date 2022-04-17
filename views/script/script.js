@@ -19,7 +19,7 @@ for (let i = 1; i < CALANDAR.length + 1; i++) {
     let option = document.createElement('option');
     let month = (i <= 9) ? '0' + i : i;
     option.value = month;
-    option.innerHTML = day;
+    option.innerHTML = month;
     BIRTHDAY_SELECT_MONTH.appendChild(option);
 }
 
@@ -69,10 +69,11 @@ FORMS[0].addEventListener('submit', function(e) {
 const ERROR = FORMS[1].querySelector('[role=alert]');
 const ERROR_MSG = 'Veuillez remplir les champs manquants !';
 const MAX_INPUTS = FORMS[1].querySelectorAll('input').length;
+const UNNECESSARY_INPUTS = 3;
 
 let checkedInputsErrors = [];
 
-for (let i = 0; i < MAX_INPUTS; i++) {
+for (let i = 1; i < MAX_INPUTS - 3; i++) {
     checkedInputsErrors[i] = true;
 }
 
@@ -83,53 +84,53 @@ FORMS[1].addEventListener('submit', (e) => {
     
     // Check if firstname is empty
     if (inputs[1].value === '') {
-        checkedInputsErrors[1] = false;
+        checkedInputsErrors[1] = true;
         errorStyle(inputs[1]);
         ERROR.hidden = false;
         ERROR.innerText = ERROR_MSG;
     } else {
-        checkedInputsErrors[1] = true;
+        checkedInputsErrors[1] = false;
         successStyle(inputs[1]);
     }
 
     // Check if lastname is empty
     if (inputs[2].value === '') {
-        checkedInputsErrors[2] = false;
+        checkedInputsErrors[2] = true;
         errorStyle(inputs[2]);
         ERROR.hidden = false;
         ERROR.innerText = ERROR_MSG;
     } else {
-        checkedInputsErrors[2] = true;
+        checkedInputsErrors[2] = false;
         successStyle(inputs[2]);
     }
 
     // Check if (phone number || email) are equal or empty
     if (inputs[3].value === '' || inputs[4].value === '') {
-        checkedInputsErrors[3, 4] = false;
+        checkedInputsErrors[3] = true;
         errorStyle(inputs[3]);
         errorStyle(inputs[4]);
         ERROR.hidden = false;
         ERROR.innerText = ERROR_MSG;
     } else if (inputs[3].value !== inputs[4].value){
-        checkedInputsErrors[3, 4] = false;
+        checkedInputsErrors[3] = true;
         errorStyle(inputs[3]);
         errorStyle(inputs[4]);
         ERROR.hidden = false;
         ERROR.innerText = ERROR_MSG;
     } else {
-        checkedInputsErrors[3, 4] = true;
+        checkedInputsErrors[3] = false;
         successStyle(inputs[3]);
         successStyle(inputs[4]);
     }
 
     // Check if password is empty
     if (inputs[5].value === '') {
-        checkedInputsErrors[5] = false;
+        checkedInputsErrors[4] = true;
         errorStyle(inputs[5]);
         ERROR.hidden = false;
         ERROR.innerText = ERROR_MSG;
     } else {
-        checkedInputsErrors[5] = true;
+        checkedInputsErrors[4] = false;
         successStyle(inputs[5]);
     }
 
@@ -137,14 +138,14 @@ FORMS[1].addEventListener('submit', (e) => {
     if (BIRTHDAY_SELECT_DAY.options[BIRTHDAY_SELECT_DAY.selectedIndex].value === '0' || 
         BIRTHDAY_SELECT_MONTH.options[BIRTHDAY_SELECT_MONTH.selectedIndex].value === '0' || 
         BIRTHDAY_SELECT_YEAR.options[BIRTHDAY_SELECT_YEAR.selectedIndex].value === '0') {
-            checkedInputsErrors[9] = false;
+            checkedInputsErrors[5] = true;
             errorStyle(BIRTHDAY_SELECT_DAY);
             errorStyle(BIRTHDAY_SELECT_MONTH);
             errorStyle(BIRTHDAY_SELECT_YEAR);   
             ERROR.hidden = false;
             ERROR.innerText = ERROR_MSG;
     } else {
-            checkedInputsErrors[9] = true;
+            checkedInputsErrors[5] = false;
             successStyle(BIRTHDAY_SELECT_DAY);
             successStyle(BIRTHDAY_SELECT_MONTH);
             successStyle(BIRTHDAY_SELECT_YEAR);
