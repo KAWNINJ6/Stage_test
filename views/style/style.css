@@ -1,0 +1,201 @@
+html {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(white, #D3D8E8) no-repeat; 
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    
+    background-color: #4c66a4;
+}
+
+    #header form {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+        #header form li {
+            float: left;
+            text-align: left;
+            
+            font-size: 13px;
+            margin-left: 15px;
+            list-style-type: none;
+            color: white;
+        }
+        
+            #header form a {
+                color: #A9BCF5;
+                font-size: 11px;
+                text-decoration: none;
+            }
+
+        #header form input[type="text"] {
+            margin-top: 3px;
+            margin-bottom: 3px;
+            width: 150px;
+            border: 1px solid #08298A;
+            height: 25px;
+            padding-left: 3px;
+        }
+
+        #header form input[type="password"] {
+            margin-top: 3px;
+            margin-bottom: 3px;
+            padding-left: 3px;
+            width: 150px;
+            height: 25px;
+            border: 1px solid #08298A;
+        }
+
+        #header form input[type="submit"] {
+            cursor: pointer;  
+            height: 25px;
+            margin-top: 20px;
+            background-color: #084B8A;
+            color: white;
+            border: 1px solid #08298A;
+        }
+
+#register {
+    display: flex;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding: 0px;
+    font-family: helvetica, arial, sans-serif;
+
+}
+
+    #register form {
+        margin-top: 10px;
+    }
+
+        #register form h1 {
+            margin-bottom: 5%;
+            font-size: 37px;
+            color: #2E2E2E;
+        }
+
+        #register form p {
+            font-size: 18px;
+            color: #2E2E2E;
+        }
+
+        #register form li {
+            list-style-type: none;
+            margin-top: 10px;
+        }
+            
+            #register form input {
+                height: 40px;
+                border-radius: 5px;
+                padding-left: 10px;
+                font-size: 18px;
+                border: 1px solid #BDBDBD;
+            }
+
+            #register form .username {
+                display: flex;
+            }
+
+            #register form .firstname {
+                margin-right: 3.1%;
+            }
+
+            #register form li input[class="login"] {
+                width: 100%;
+            }
+
+            #register form li .password {
+                width: 100%;
+            }
+
+            #register form li a {
+                margin-left: 10px;
+                width: 150px;
+                color: #045FB4;
+                text-decoration: none;
+                font-size: 11px;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 15px;
+            }
+
+                #register form li a:hover {
+                    text-decoration: underline;
+                }
+        
+        #register form .birthday {
+            display: flex;
+            flex-direction: row;
+
+            margin-bottom: 5%;
+        }
+            #register form .birthday select {
+                height: 28px;
+                width: 65px;
+                margin-right: 2%;
+                background-color: white;
+            }
+
+            #register form .birthday a {
+                color: #045FB4;
+                font-size: 11px;
+                text-decoration: none;
+            }
+        
+        #register form .gender {
+            font-weight: bold;
+        }
+
+            #register form .gender input[type="radio"] {
+                margin-top: -3.5px;
+                vertical-align: middle;
+            }
+
+        #register form .terms {
+            margin-top: 5%;
+            color: #424242;
+            font-size: 11px;
+        }
+
+            #register form .terms a {
+                display: inline;
+                margin: 0px;
+            }
+
+        #register form p[role=alert] {
+            color: red;
+            font-size: 12px;
+        }
+
+        #register form li input[type="submit"] {
+            width: 205px;
+            height: 45px;
+            text-align: center;
+            font-size: 19px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-family: 'Freight Sans Bold', helvetica, arial, sans-serif !important;
+            font-weight: bold !important;
+            background: linear-gradient(#67ae55, #578843);
+            background-color: #69a74e;
+            box-shadow: inset 0 1px 1px #a4e388;
+            border-color: #3b6e22 #3b6e22 #2c5115;
+            border: 1px solid;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            text-shadow: 0 1px 2px rgba(0,0,0,.5);
+        }
