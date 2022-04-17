@@ -10,5 +10,5 @@
 4. Lancer l'éxecutable WampServer. 
 5. Taper "LocalHost" sur un navigateur.
 6. Ajouter une base de données mySql sur phpMyAdmin à partir du fichier SQL "user" situé dans le dossier "libraries" du répo.
-7. Vérifier dans le fichier php "Database" que les informations(nom de la base, identifiant, mdp) sont correct.
+7. Vérifier dans le fichier php "Database" que les informations (nom de la base, identifiant, mdp) sont correct.
 8. Dans "LocalHost" rajouter "/Stage_test", l'index.php se lancera automatiquement ainsi que le site.   
