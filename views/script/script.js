@@ -73,7 +73,7 @@ const UNNECESSARY_INPUTS = 3;
 
 let checkedInputsErrors = [];
 
-for (let i = 1; i < MAX_INPUTS - 3; i++) {
+for (let i = 1; i < MAX_INPUTS - UNNECESSARY_INPUTS; i++) {
     checkedInputsErrors[i] = true;
 }
 
